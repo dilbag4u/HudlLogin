@@ -1,0 +1,29 @@
+{
+  "name": "hudl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "npx playwright test --debug",
+    "test": "npx playwright test",
+    "test:ci": "CI=true xvfb-run npx playwright test",
+    "test:report:html": "npx playwright test --reporter=html",
+    "lint": "eslint '*/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "prepush": "lint:fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.31.2",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
